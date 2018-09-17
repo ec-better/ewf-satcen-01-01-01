@@ -33,6 +33,7 @@ class NodeATestCase(unittest.TestCase):
     def test_compile(self):
         try:
           py_compile.compile('../main/app-resources/notebook/run', doraise=True)
+      
         except:
           self.fail('failed to compile src/main/app-resources/notebook/run')
  

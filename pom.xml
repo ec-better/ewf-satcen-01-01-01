@@ -2,16 +2,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.terradue</groupId>
-  <artifactId>satcen-01-01-01</artifactId>
+  <artifactId>ewf-satcen-01-01-01</artifactId>
   <packaging>pom</packaging>
-  <name>satcen-01-01-01</name>
+  <name>ewf-satcen-01-01-01</name>
   <parent>
     <groupId>com.terradue</groupId>
     <artifactId>dcs-python-parent</artifactId>
     <version>3.0.1-docker</version>
   </parent>
   <description>SATCEN-01-01-01 Sentinel-2 Vegetation and Water Thematic Index</description>
-  <version>0.7</version>
+  <version>0.8</version>
   <properties>
     <summary>SATCEN-01-01-01 Sentinel-2 Vegetation and Water Thematic Index</summary>
     <description>SATCEN-01-01-01 Sentinel-2 Vegetation and Water Thematic Index</description>

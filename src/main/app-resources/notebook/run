@@ -143,7 +143,7 @@ def stage_in(reference):
     retrieved = ciop.copy(search[0]['enclosure'], tmp_dir)
     assert(retrieved), sys.exit(ERR_STAGEIN)
 
-    identifiers.append(search[0]['identifier'])
+    identifiers.append(search[0]search[0]['enclosure'][search[0]['enclosure'].rfind('/')+1:-4])
     enclosures.append(search[0]['enclosure'])
     local_files.append(retrieved)    
   
@@ -220,7 +220,7 @@ def main():
       # execute the notebook
       nb_source = os.path.join('/application', 'notebook', 'libexec', 'input.ipynb')
       nb_target = os.path.join(runtime, 'result.ipynb')  
-      execute(identifiers[-1], reference, nb_source, nb_target, 'python2')  
+      execute(local_files[-1], reference, nb_source, nb_target, 'python2')  
     
       # publish
       publish(runtime)   

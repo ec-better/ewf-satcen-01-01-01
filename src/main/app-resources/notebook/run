@@ -144,7 +144,6 @@ def stage_in(reference):
     assert(retrieved), sys.exit(ERR_STAGEIN)
 
     
-    identifiers.append(search[0]['enclosure'][search[0]['enclosure'].rfind('/')+1:-4])
     identifiers.append((search[0]['enclosure'][search[0]['enclosure'].rfind('/')+1:]).replace('.zip',''))
     enclosures.append(search[0]['enclosure'])
     local_files.append(retrieved)    

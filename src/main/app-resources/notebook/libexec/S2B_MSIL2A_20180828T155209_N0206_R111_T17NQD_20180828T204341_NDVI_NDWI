@@ -2,16 +2,16 @@
 <ns0:EarthObservation xmlns:ns0="http://www.opengis.net/opt/2.1">
   <ns1:phenomenonTime xmlns:ns1="http://www.opengis.net/om/2.0">
     <ns2:TimePeriod xmlns:ns2="http://www.opengis.net/gml/3.2">
-      <ns2:beginPosition>2017-07-01T09:30:31.0260000Z</ns2:beginPosition>
-      <ns2:endPosition>2017-07-01T09:30:31.0260000Z</ns2:endPosition>
+      <ns2:beginPosition>2018-08-28T15:52:09.0250000Z</ns2:beginPosition>
+      <ns2:endPosition>2018-08-28T15:52:09.0250000Z</ns2:endPosition>
     </ns2:TimePeriod>
   </ns1:phenomenonTime>
   <ns3:procedure xmlns:ns3="http://www.opengis.net/om/2.0">
     <ns4:EarthObservationEquipment xmlns:ns4="http://www.opengis.net/eop/2.1">
       <ns4:acquisitionParameters>
         <ns5:Acquisition xmlns:ns5="http://www.opengis.net/sar/2.1">
-          <ns4:orbitNumber>10572</ns4:orbitNumber>
-          <ns4:wrsLongitudeGrid>136</ns4:wrsLongitudeGrid>
+          <ns4:orbitNumber>7716</ns4:orbitNumber>
+          <ns4:wrsLongitudeGrid>111</ns4:wrsLongitudeGrid>
         </ns5:Acquisition>
       </ns4:acquisitionParameters>
     </ns4:EarthObservationEquipment>
@@ -24,7 +24,7 @@
             <ns8:Polygon>
               <ns8:exterior>
                 <ns8:LinearRing>
-                  <ns8:posList count="12">19.7949961896 12.8922523156 19.8370098739 12.9018864238 19.9853776609 12.9363167831 20.1338335135 12.970483124 20.2821819303 13.0047995226 20.4304969883 13.0392310053 20.5787315212 13.073709585 20.7269463109 13.1081270835 20.7898267791 13.1227839541 20.7905086879 13.1724802794 19.7988177122 13.1840761005 19.7949961896 12.8922523156 </ns8:posList>
+                  <ns8:posList count="9">2.84116713229 -79.20106322 2.80385998474 -79.055766044 2.80402405376 -79.0557297918 2.80395512505 -79.0554608717 2.80631626014 -79.0549386813 2.74245039425 -78.8239706515 2.62374538297 -78.8502213626 2.62439249013 -79.2014320633 2.84116713229 -79.20106322 </ns8:posList>
                 </ns8:LinearRing>
               </ns8:exterior>
             </ns8:Polygon>
@@ -40,7 +40,7 @@
   </ns9:result>
   <ns10:metaDataProperty xmlns:ns10="http://www.opengis.net/eop/2.1">
     <ns10:EarthObservationMetaData>
-      <ns10:identifier>S2A_MSIL2A_20170701T093031_N0205_R136_T33QTC_20170701T094237_NDVI_NDWI</ns10:identifier>
+      <ns10:identifier>S2B_MSIL2A_20180828T155209_N0206_R111_T17NQD_20180828T204341_NDVI_NDWI</ns10:identifier>
     </ns10:EarthObservationMetaData>
   </ns10:metaDataProperty>
 </ns0:EarthObservation>

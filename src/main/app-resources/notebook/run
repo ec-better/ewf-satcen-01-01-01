@@ -143,7 +143,8 @@ def stage_in(reference):
     retrieved = ciop.copy(search[0]['enclosure'], tmp_dir)
     assert(retrieved), sys.exit(ERR_STAGEIN)
 
-    identifiers.append(search[0]['identifier'])
+    
+    identifiers.append((search[0]['enclosure'][search[0]['enclosure'].rfind('/')+1:]).replace('.zip',''))
     enclosures.append(search[0]['enclosure'])
     local_files.append(retrieved)    
   

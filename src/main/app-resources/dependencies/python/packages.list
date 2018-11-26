@@ -31,7 +31,7 @@ cioppy=0.2.9=py27h6a2dc41_0
 click=6.7=py27h4225b90_0
 click-plugins=1.0.3=py27_0
 cligj=0.4.0=py27_0
-conda=4.4.6=py27_0
+conda=4.5.11=py27_0
 conda-build=3.2.0=py27_0
 conda-env=2.6.0=h36134e3_1
 conda-verify=2.0.0=py27hf052a9d_0
@@ -317,7 +317,7 @@ scipy=1.1.0=py27_nomklh9c1e066_0
 selenium=3.11.0=py27_0
 sen2cor=2.0.6=py27_0
 send2trash=1.5.0=py27_0
-setuptools=23.0.0=py27_0
+setuptools=40.4.3=py27_0
 shapely=1.5.16=py27_0
 simplegeneric=0.8.1=py27_1
 singledispatch=3.4.0.3=py27_0

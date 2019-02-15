@@ -166,11 +166,11 @@ def execute(identifier, reference, nb_source, nb_target, kernel = 'python2'):
         match = re.search("ValueError: ([^\\n]*No Band B8.[^\\n]*)", str(e))
         match1 = re.search("ValueError: ([^\\n]*Selected product cloud coverage percentage is.[^\\n]*)", str(e))
         if match or match1:
-            ciop.log('INFO', '%s [notebook execution stopped]' % match.groups(1)[0])
+            match_res = match.groups(1)[0] if match else match1.groups(1)[0]
+            ciop.log('INFO', '%s [notebook execution stopped]' % match_res)
         else:
             out = None
             ciop.log('ERROR', 'Error executing the notebook "%s".' % nb_source)
-
 
         with io.open(nb_target, 'wb') as file:
             file.write(nbf.writes(nb))
@@ -223,11 +223,12 @@ def main():
     
         # execute the notebook
         nb_source = os.path.join('/application', 'notebook', 'libexec', 'input.ipynb')
-        nb_target = os.path.join(runtime, 'result.ipynb')  
+        nb_target = os.path.join(runtime, 'result.ipynb')
+        
         execute(identifiers[-1], reference, nb_source, nb_target, 'python2')  
-    
+                
         # publish
-        publish(runtime)   
+        publish(runtime) 
    
         # clean-up 
         clean_up(runtime)

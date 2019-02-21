@@ -127,9 +127,9 @@ ciop = cioppy.Cioppy()"""))
     nb_stagein['cells'] = code
     fname = os.path.join(path, 'stage-in.ipynb')
     with open(fname, 'w') as f:
-      nbf.write(nb_stagein, f)
+        nbf.write(nb_stagein, f)
     
-    #ciop.publish('stage-in.ipynb', metalink=True)
+    #ciop.publish(fname, metalink=True)
     
 def stage_in(reference):
  
@@ -172,17 +172,13 @@ def execute(identifier, reference, nb_source, nb_target, kernel = 'python2'):
             out = None
             ciop.log('ERROR', 'Error executing the notebook "%s".' % nb_source)
 
-        with io.open(nb_target, 'wb') as file:
-            file.write(nbf.writes(nb))
-            file.close()
-      
-        ciop.publish(nb_target, metalink=True)
         raise
+
     finally:
         ciop.log('INFO', 'Write notebook')  
         with io.open(nb_target, 'wb') as file:
             file.write(nbf.writes(nb))
-            file.close() 
+            file.close()
 
 def publish(runtime):
    
@@ -225,13 +221,14 @@ def main():
         nb_source = os.path.join('/application', 'notebook', 'libexec', 'input.ipynb')
         nb_target = os.path.join(runtime, 'result.ipynb')
         
-        execute(identifiers[-1], reference, nb_source, nb_target, 'python2')  
-                
-        # publish
-        publish(runtime) 
+        try:
+            execute(identifiers[-1], reference, nb_source, nb_target, 'python2')
+        finally:
+            # publish
+            publish(runtime) 
    
-        # clean-up 
-        clean_up(runtime)
+            # clean-up 
+            clean_up(runtime)
 
     # clean-up workspace folder
     shutil.rmtree(os.path.split(tmp_dir)[0])
